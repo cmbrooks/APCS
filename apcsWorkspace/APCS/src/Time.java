@@ -8,8 +8,9 @@ public class Time {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		/*Initialization of Variables*/
 		
-		//Initialization of Variables
+		/*Current Time: 10:40:35*/
 		int currHour = 10;
 		int currMinute = 40;
 		int currSecond = 35;
@@ -19,13 +20,13 @@ public class Time {
 		int secondsLeft;
 		int dayPercent;
 		
-		//Processing
+		/*Processing*/
 		secondsPassed = (currHour*360 + currMinute*60 + currSecond);
 		totalSeconds = (24*360);
 		secondsLeft = (totalSeconds - secondsPassed);
-		dayPercent = ((secondsLeft/totalSeconds)*100);
+		dayPercent = ((secondsPassed*100)/(totalSeconds));
 		
-		//Output
+		/*Output*/
 		System.out.print("Seconds since Midnight: ");
 		System.out.println(secondsPassed);
 		System.out.print("Seconds left today: ");
