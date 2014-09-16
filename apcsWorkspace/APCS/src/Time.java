@@ -21,7 +21,7 @@ public class Time {
 		int dayPercent;
 		
 		/*Processing*/
-		secondsPassed = (currHour*360 + currMinute*60 + currSecond);
+		secondsPassed = (currHour*3600 + currMinute*60 + currSecond);
 		totalSeconds = (24*360);
 		secondsLeft = (totalSeconds - secondsPassed);
 		dayPercent = ((secondsPassed*100)/(totalSeconds));
