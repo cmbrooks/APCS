@@ -29,27 +29,17 @@
 <presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Date.java" partName="Date.java" path="U:/Documents/GitHub/APCS/apcsWorkspace/APCS/src/Date.java" title="Date.java" tooltip="APCS/src/Date.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/APCS/src/Date.java"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="29"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Time.java" partName="Time.java" path="U:/Documents/GitHub/APCS/apcsWorkspace/APCS/src/Time.java" title="Time.java" tooltip="APCS/src/Time.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/APCS/src/Time.java"/>
-<editorState selectionHPixel="0" selectionLength="45" selectionOffset="0"/>
-</editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="exercise3_4.java" partName="exercise3_4.java" path="U:/Documents/GitHub/APCS/apcsWorkspace/APCS/src/exercise3_4.java" title="exercise3_4.java" tooltip="APCS/src/exercise3_4.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/APCS/src/exercise3_4.java"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="14"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="25"/>
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="excersise3_3.java" partName="excersise3_3.java" path="U:/Documents/GitHub/APCS/apcsWorkspace/APCS/src/excersise3_3.java" title="excersise3_3.java" tooltip="APCS/src/excersise3_3.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/APCS/src/excersise3_3.java"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="12"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="28"/>
 </editor>
 </editors>
 <views>
@@ -310,13 +300,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/Time.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/excersise3_3.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/exercise3_4.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/exercise3_4.java"/>
 </editors>
-<item historyLabel="Date.java" index="0">
-<position info="not_deleted" x="29" y="0"/>
-</item>
-<item historyLabel="Time.java" index="1">
-<position info="not_deleted" x="5" y="0"/>
-</item>
 <item historyLabel="Date.java" index="0">
 <position info="not_deleted" x="29" y="0"/>
 </item>
@@ -457,6 +442,12 @@
 </item>
 <item historyLabel="exercise3_4.java" index="3">
 <position info="not_deleted" x="14" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="12" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="4">
+<position info="not_deleted" x="25" y="0"/>
 </item>
 <item active="true" historyLabel="excersise3_3.java" index="2">
 <position info="not_deleted" x="12" y="0"/>
