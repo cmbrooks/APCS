@@ -29,6 +29,8 @@
 <presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
@@ -37,9 +39,17 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/APCS/src/Date.java"/>
 <editorState selectionHPixel="0" selectionLength="0" selectionOffset="29"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Time.java" partName="Time.java" path="U:/Documents/GitHub/APCS/apcsWorkspace/APCS/src/Time.java" title="Time.java" tooltip="APCS/src/Time.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Time.java" partName="Time.java" path="U:/Documents/GitHub/APCS/apcsWorkspace/APCS/src/Time.java" title="Time.java" tooltip="APCS/src/Time.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/APCS/src/Time.java"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="91"/>
+<editorState selectionHPixel="0" selectionLength="45" selectionOffset="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="exercise3_4.java" partName="exercise3_4.java" path="U:/Documents/GitHub/APCS/apcsWorkspace/APCS/src/exercise3_4.java" title="exercise3_4.java" tooltip="APCS/src/exercise3_4.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/APCS/src/exercise3_4.java"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="14"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="excersise3_3.java" partName="excersise3_3.java" path="U:/Documents/GitHub/APCS/apcsWorkspace/APCS/src/excersise3_3.java" title="excersise3_3.java" tooltip="APCS/src/excersise3_3.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/APCS/src/excersise3_3.java"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="12"/>
 </editor>
 </editors>
 <views>
@@ -250,58 +260,42 @@
 <view id="org.eclipse.debug.ui.VariableView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
-<part id="0"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7488226" ratioLeft="477" ratioRight="160" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7488226" ratioLeft="477" ratioRight="160" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
-<part id="0"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.4486373" ratioLeft="214" ratioRight="263" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
-<part id="0"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
-<part id="0"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -312,134 +306,160 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/helloWorld.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/excercise2_5.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/excercise2_2.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/Date.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/Time.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/excersise3_3.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/APCS/src/exercise3_4.java"/>
 </editors>
-<item historyLabel="helloWorld.java" index="0">
-<position info="not_deleted" x="160" y="0"/>
-</item>
-<item historyLabel="excercise2_5.java" index="1">
-<position/>
-</item>
-<item historyLabel="helloWorld.java" index="0">
-<position info="not_deleted" x="160" y="0"/>
-</item>
-<item historyLabel="excercise2_5.java" index="1">
-<position info="not_deleted" x="76" y="0"/>
-</item>
-<item historyLabel="excercise2_2.java" index="2">
-<position/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="501" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="387" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="365" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="491" y="0"/>
-</item>
-<item historyLabel="Time.java" index="4">
-<position/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="276" y="0"/>
-</item>
-<item historyLabel="Time.java" index="4">
-<position info="not_deleted" x="23" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="276" y="0"/>
-</item>
-<item historyLabel="Time.java" index="4">
-<position info="not_deleted" x="25" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="276" y="0"/>
-</item>
-<item historyLabel="Time.java" index="4">
-<position info="not_deleted" x="25" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="276" y="0"/>
-</item>
-<item historyLabel="Time.java" index="4">
-<position info="not_deleted" x="25" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="276" y="0"/>
-</item>
-<item historyLabel="Time.java" index="4">
-<position info="not_deleted" x="25" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
+<item historyLabel="Date.java" index="0">
 <position info="not_deleted" x="29" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
-<position info="not_deleted" x="28" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="29" y="0"/>
-</item>
-<item historyLabel="Time.java" index="4">
-<position info="not_deleted" x="28" y="0"/>
-</item>
-<item historyLabel="Date.java" index="3">
-<position info="not_deleted" x="29" y="0"/>
-</item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="5" y="0"/>
 </item>
-<item historyLabel="Date.java" index="3">
+<item historyLabel="Date.java" index="0">
 <position info="not_deleted" x="29" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="5" y="0"/>
 </item>
-<item historyLabel="Date.java" index="3">
+<item historyLabel="Date.java" index="0">
 <position info="not_deleted" x="29" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="5" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="313" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="684" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="728" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="764" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="530" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="575" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="851" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="863" y="0"/>
 </item>
-<item historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="177" y="0"/>
 </item>
-<item active="true" historyLabel="Time.java" index="4">
+<item historyLabel="Time.java" index="1">
 <position info="not_deleted" x="568" y="52"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="187" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="225" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="351" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="271" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="397" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="428" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="475" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="474" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="503" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="567" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="603" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="57" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="314" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="603" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="314" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="107" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="164" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="403" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="445" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="364" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="493" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="507" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="250" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="725" y="0"/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="603" y="0"/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="725" y="0"/>
+</item>
+<item historyLabel="Time.java" index="1">
+<position/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position/>
+</item>
+<item historyLabel="Time.java" index="1">
+<position/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position/>
+</item>
+<item historyLabel="excersise3_3.java" index="2">
+<position/>
+</item>
+<item historyLabel="exercise3_4.java" index="3">
+<position info="not_deleted" x="14" y="0"/>
+</item>
+<item active="true" historyLabel="excersise3_3.java" index="2">
+<position info="not_deleted" x="12" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -458,6 +478,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="excersise3_3.java" tooltip="APCS/src/excersise3_3.java">
+<persistable path="/APCS/src/excersise3_3.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="exercise3_4.java" tooltip="APCS/src/exercise3_4.java">
+<persistable path="/APCS/src/exercise3_4.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Time.java" tooltip="APCS/src/Time.java">
 <persistable path="/APCS/src/Time.java"/>
 </file>
