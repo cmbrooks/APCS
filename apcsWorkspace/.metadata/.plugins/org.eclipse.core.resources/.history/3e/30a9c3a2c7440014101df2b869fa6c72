@@ -1,0 +1,46 @@
+/* Exercise 2.2. 2014-09-25
+ * Cody Brooks
+ */
+public class recursion_part1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		System.out.println(fact(6));
+		System.out.println(fib(3));
+		
+
+	}
+	
+/*
+  	public static int fact(int n){
+		int nfact;
+		if (n == 0){
+			nfact = 1;
+			return nfact;
+		}else{
+			nfact = n*fact(n-1);
+		}
+		return nfact;
+	}
+*/
+  	
+  	public static int fib(int x){
+  		int result;
+  		if (x == 0){
+  			result = 0;
+  			return result;
+  		}else if (x==1){
+  			result = 1;
+  		}else{
+  			result = fib(x-1) + fib(x-2);
+  		}
+  		return result;
+  	}
+  	
+	
+	public static void ack (int m, int n){
+		
+	}
+
+}
