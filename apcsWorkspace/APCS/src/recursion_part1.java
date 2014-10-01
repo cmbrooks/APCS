@@ -1,18 +1,22 @@
 /* Exercise 2.2. 2014-09-25
  * Cody Brooks
  */
+
 public class recursion_part1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int x = 6;
+		int m = 2;
+		int n = 3;
 		
-		System.out.println("Factoral of 6: " + fact(6));
-		System.out.println("Fibonacci of 8: " + fib(8));
-		System.out.println("Ackermann of 2 and 3: " + ack(2, 3));
+		System.out.println("Factoral of "+ x + ": " + fact(n));
+		System.out.println("Fibonacci of "+ x + ": " + fib(n));
+		System.out.println("Ackermann of " + m + " and " + n + ": " + ack(m, n));
 
 	}
-	
 
+	
   	public static int fact(int n){
 		int result;
 		if (n == 0){
