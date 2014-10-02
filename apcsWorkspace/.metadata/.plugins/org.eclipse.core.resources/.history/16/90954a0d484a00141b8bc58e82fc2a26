@@ -20,7 +20,7 @@ public class excercise7_5 {
 	public static double myexp(int x, int y){ //Tested
 		double exp = x;
 		while(y > 1){
-			exp = exp*x;
+			exp= exp*x;
 			y--;
 		}
 		return exp;

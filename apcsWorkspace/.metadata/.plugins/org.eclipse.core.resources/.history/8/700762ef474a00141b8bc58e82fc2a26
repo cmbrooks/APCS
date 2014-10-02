@@ -5,9 +5,9 @@ public class excercise7_5 {
 		
 		int x = 1;
 		int i = 0;
-		double e = 1.0;
+		double e = 1;
 		
-		while(i <= x){
+		while(i < x){
 			e = e + (myexp(x,i)/fact(i));
 			i++;
 		}
@@ -20,7 +20,7 @@ public class excercise7_5 {
 	public static double myexp(int x, int y){ //Tested
 		double exp = x;
 		while(y > 1){
-			exp = exp*x;
+			exp= exp*x;
 			y--;
 		}
 		return exp;

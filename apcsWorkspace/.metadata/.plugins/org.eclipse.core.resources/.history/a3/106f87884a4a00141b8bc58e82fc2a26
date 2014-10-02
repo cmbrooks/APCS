@@ -3,7 +3,7 @@ public class excercise7_5 {
 
 	public static void main(String[] args) {
 		
-		int x = 1;
+		int x = 3.5;
 		int i = 0;
 		double e = 1.0;
 		
@@ -20,7 +20,7 @@ public class excercise7_5 {
 	public static double myexp(int x, int y){ //Tested
 		double exp = x;
 		while(y > 1){
-			exp = exp*x;
+			exp= exp*x;
 			y--;
 		}
 		return exp;

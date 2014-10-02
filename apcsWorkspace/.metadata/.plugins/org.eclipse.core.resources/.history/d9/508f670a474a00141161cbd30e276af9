@@ -3,16 +3,25 @@ public class excercise7_5 {
 
 	public static void main(String[] args) {
 		
-		int x = 1;
-		int i = 0;
-		double e = 1.0;
+		int x = 3;
+		int i = x;
+		double e = 1;
+		double a;
+		double b;
+		double c;
 		
-		while(i <= x){
-			e = e + (myexp(x,i)/fact(i));
-			i++;
-		}
-		
-		System.out.println("e^" + x+ " is: " + e);
+		a = myexp(x,i)/fact(i);
+		b = myexp(x,(i-1))/fact(i-1);
+		c = myexp(x,(i-2))/fact(i-2);
+//		while(i > 0){
+//			e = e + (myexp(x,i)/fact(i));
+//			i--;
+//		}
+//		
+//		System.out.println("e^" + x+ " is: " + e);
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
 		
 	}
 
@@ -20,7 +29,7 @@ public class excercise7_5 {
 	public static double myexp(int x, int y){ //Tested
 		double exp = x;
 		while(y > 1){
-			exp = exp*x;
+			exp= exp*x;
 			y--;
 		}
 		return exp;
