@@ -1,0 +1,40 @@
+
+public class excercise7_5 {
+
+	public static void main(String[] args) {
+		
+		int x = 3;
+		int i = x;
+		
+		System.out.println(myexp(2,3));
+		
+//		while(i > 0){
+//			myexp(x,i);
+//			i--;
+//		}
+		
+	}
+
+	
+	public static int myexp(int x, int y){
+		int exp = x;
+		while(y>0){
+			exp= exp*x;
+			y--;
+		}
+		return exp;
+	}
+	
+	
+  	public static int fact(int n){
+		int result;
+		if (n == 0){
+			result = 1;
+			return result;
+		}else{
+			result = n*fact(n-1);
+		}
+		return result;
+	}
+	
+}
