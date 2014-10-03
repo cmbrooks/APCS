@@ -6,32 +6,23 @@ public class excercise7_5 {
 		int x = 3;
 		int i = x;
 		double e = 1.0;
-		double e_eff;
+//		double e_eff;
 		
-		if (myexp(x,i,e) == effexp){
-			System.out.println("Both ways of calculating e^x are equal in value");
-		}else{
-			System.out.println("You done goofed somwhere");
-		}
+		myexp(x,i,e);
 		
 	}
 
 	
-	public static void myexp(double x, int i, double e){ //Tested
-		while(i > 0){
+	public static double myexp(double x, int i, double e){ //Tested
+		while(i >+ 0){
+			System.out.print(i + "\t" + e);
 			e = e + (Math.pow(x,i)/fact(i));
+			
+			System.out.println("\t" + e);
 			i--;
 		}
-		System.out.println("e^" + x+ " is: " + e);
-	}
-	
-	
-	public static void effexp(double x, int i, double e){
-		while (i > 0){
-			e = e + e*(x/i);
-			i--;
-		}
-		System.out.println ("A more efficient way to calculate e^" + x + "is: " + e);
+		System.out.println("e^" + x + " is: " + e);
+		return e;
 	}
 	
 	
