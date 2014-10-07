@@ -5,11 +5,11 @@ public class excercise7_5 {
 		
 		double x = 3.0;
 		
-		myexp(x);
-		System.out.println("");
+//		myexp(x);
+//		System.out.println("");
 		myexp2(x);
 		System.out.println("");
-		check(x);
+//		check(x);
 		
 	}
 
@@ -17,13 +17,16 @@ public class excercise7_5 {
 	public static double myexp(double x){ //Tested
 		
 		double i = 0;
+		int n = 15;
 		double e = 0;
+		double result;
 		
-		while(i <= x){
-//			System.out.print("i: " + i + "\t" + "old e: " + e);
-			e = e + ((Math.pow(x,i))/fact((int)i));
-			System.out.println("Math.pow(x,i)/fact(i): " + (Math.pow(x,i)/fact((int)i)));
-//			System.out.println("\t" + "new e: " + e);
+		while(i < n){
+			System.out.print("i: " + i + "\t" + "old e: " + e);
+			result = (Math.pow(x,i))/fact((int)i);
+			e += result;
+//			System.out.println("Math.pow(x,i)/fact(i): " + e);
+			System.out.println("\t" + "new e: " + e);
 			i++;
 		}
 		
@@ -38,11 +41,12 @@ public class excercise7_5 {
 		double xdivi;
 		double i = 1;
 		double e = 1;
+		int n = 15;
 		
-		while(i <= x){
-			xdivi = x/i;
+		while(i < n){
+			xdivi = i/x;
 			System.out.print("i: " + i + "\t" + "old e: " + e + "\t" + "x: " + x + "\t" + "x/i: " + xdivi);
-			e = e + (e*xdivi);
+			e = (e*xdivi);
 			System.out.println("\t" + "new e: " + e);
 			i++;
 		}
