@@ -1,0 +1,4 @@
+Uncaught java.lang.ArrayIndexOutOfBoundsException exception in thread "main" in a method rainbow.returnHue() with signature (I)Ljava/lang/String;
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
+	at rainbow.returnHue(rainbow.java:14) [file:/home/cmbrooks/Documents/code/APCS/apcsWorkspace/APCS/bin/rainbow.class]
+	at assign6.main(assign6.java:6) [file:/home/cmbrooks/Documents/code/APCS/apcsWorkspace/APCS/bin/assign6.class]

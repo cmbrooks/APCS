@@ -1,0 +1,17 @@
+public class rainbow{
+	
+	int rainbowColorCount = 7;
+	String[] colorList = {"red", "orange", "yellow", "green", "blue", "indigo", "violet"};
+	static String[] colorHuesHTML = {"FF000", "FF6600", "FFFF00", "009900", "0000FF", "6600FF", "660066"};
+	int colorIndex;
+	String newHue;
+	
+	public static void updateHue(int colorIndex, String newHue){
+		colorHuesHTML[colorIndex] = newHue;
+	}
+	
+	public static String returnHue(int colorIndex){
+		return colorHuesHTML[colorIndex];
+	}
+	
+}

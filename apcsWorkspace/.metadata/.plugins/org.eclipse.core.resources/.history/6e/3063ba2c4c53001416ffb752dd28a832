@@ -1,0 +1,10 @@
+public class assign6 {
+
+	public static void main(String[] args) {
+		
+		rainbow DoubleRainbow = new rainbow();
+		System.out.println(DoubleRainbow.returnHue(3));
+
+	}
+
+}
