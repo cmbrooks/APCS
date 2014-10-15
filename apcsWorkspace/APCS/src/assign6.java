@@ -3,9 +3,9 @@ public class assign6 {
 	public static void main(String[] args) {
 		
 		String container = "Rubermaid";
-		PODS pod3 = new PODS();
+		container pods = new container();
 		
-		System.out.println("Twice the length  of the string: " + pod3.storage(container));
+		System.out.println("Twice the length  of the string: " + pods.storage(container));
 		
 		
 		int colorIndex = 3;
@@ -21,7 +21,7 @@ public class assign6 {
 }
 
 
-public class rainbow{
+class rainbow{
 	
 	int rainbowColorCount = 7;
 	String[] colorList = {"red", "orange", "yellow", "green", "blue", "indigo", "violet"};
@@ -29,18 +29,18 @@ public class rainbow{
 	int colorIndex;
 	String newHue;
 	
-	public static void updateHue(int colorIndex, String newHue){
+	public void updateHue(int colorIndex, String newHue){
 		colorHuesHTML[colorIndex] = newHue;
 	}
 	
-	public static String returnHue(int colorIndex){
+	public String returnHue(int colorIndex){
 		return colorHuesHTML[colorIndex];
 	}
 	
 }
 
 
-public class PODS{
+class container{
 	
 	int storage(String s) {
 		  return s.length() * 2;
