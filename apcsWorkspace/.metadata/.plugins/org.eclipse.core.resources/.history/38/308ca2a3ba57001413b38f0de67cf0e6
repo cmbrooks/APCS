@@ -1,0 +1,20 @@
+
+public class sieve_of_eratosthenes {
+
+	public static void main(String[] args) {
+
+		int largestNumber = 20;
+		int arraySize = largestNumber - 1;
+		int[] numberList = new int[arraySize];
+		
+		//Fill array with numbers from 0 to the array size
+		for(int i = 2; i <= arraySize+1; i++){
+			numberList[i-2] = i;
+			System.out.println(i);
+		}
+		
+		System.out.println(numberList[arraySize-1]);
+		
+	}
+
+}

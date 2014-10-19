@@ -1,0 +1,18 @@
+
+public class sieve_of_eratosthenes {
+
+	public static void main(String[] args) {
+
+		int arraySize = 20;
+		int[] numberList = new int[arraySize];
+		
+		//Fill array with numbers from 0 to the array size
+		for(int i = 2; i <= arraySize; i++){
+			System.out.println(i);
+		}
+		
+		System.out.println(arraySize);
+		
+	}
+
+}

@@ -3,9 +3,6 @@
  */
 public class Time {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*Initialization of Variables*/
@@ -22,7 +19,7 @@ public class Time {
 		
 		/*Processing*/
 		secondsPassed = (currHour*3600 + currMinute*60 + currSecond);
-		totalSeconds = (24*360);
+		totalSeconds = (24*3600);
 		secondsLeft = (totalSeconds - secondsPassed);
 		dayPercent = ((secondsPassed*100)/(totalSeconds));
 		

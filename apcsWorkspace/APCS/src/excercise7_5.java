@@ -3,9 +3,21 @@ public class excercise7_5 {
 
 	public static void main(String[] args) {
 		
-		double x = 3.0;
+		double a = 3.0;
+		double b = 5.0;
+		double c = 2.55;
+		double d = 16.0;
+		double e = 8.0;
 		
-		check(x);
+		check(a);
+		System.out.println("");
+		check(b);
+		System.out.println("");
+		check(c);
+		System.out.println("");
+		check(d);
+		System.out.println("");
+		check(e);
 		
 	}
 

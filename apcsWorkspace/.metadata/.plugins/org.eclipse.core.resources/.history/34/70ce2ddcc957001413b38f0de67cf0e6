@@ -1,0 +1,37 @@
+
+public class sieve_of_eratosthenes {
+
+	public static void main(String[] args) {
+
+		int largestNumber = 100;
+		int arraySize = largestNumber - 1;
+		int[] numberList = new int[arraySize];
+		int[] nPrimeList = new int[arraySize];
+		int np = 2;
+		int nprimeIndex = 0;
+		
+		//Fill array with numbers from 0 to the array size
+		for(int i = 2; i <= arraySize+1; i++){
+			numberList[i-2] = i;
+		}
+		
+		//Remove non-prime numbers
+		for(int i = 2*np; i <= arraySize+1; i = np+i){
+			System.out.println("Remove: " + i);
+			if(i+1 >= arraySize+1){
+				numberList[i] = numberList[i+1];
+			}else{
+				numberList[i] = 0;
+			}
+//			nPrimeList[nprimeIndex] = i;
+//			nprimeIndex++;
+		}
+		
+		//Print all elements in primeList
+//		for(int i = 0; i <= nPrimeList.length - 1; i++){
+//			System.out.println(nPrimeList[i]);
+//		}
+		
+	}
+
+}

@@ -23,7 +23,7 @@ public class exercise3_4 {
 	
 	
 	public static void printEuropean(String day, int date, String month, int year){
-		System.out.print("American format: ");
+		System.out.print("European format: ");
 		System.out.println(day + ", " + date + " " + month + ", " + year);
 	}
 	
