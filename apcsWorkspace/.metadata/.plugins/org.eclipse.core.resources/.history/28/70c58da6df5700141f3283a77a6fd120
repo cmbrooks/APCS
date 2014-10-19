@@ -1,0 +1,19 @@
+
+public class my_sqrt {
+
+	public static void main(String[] args) {
+		
+		System.out.println(squareRoot(9));
+
+	}
+	
+	public static double squareRoot(double d){
+		double approx = d/2;
+		for(int i = 0; i < 5; i++){
+			approx = ((approx+d)/2);
+			System.out.println(approx);
+		}
+		return approx;
+	}
+
+}
