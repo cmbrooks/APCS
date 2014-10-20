@@ -5,20 +5,25 @@ public class sieve_of_eratosthenes {
 
 		int largestNumber = 100;
 		boolean[] numberStatus = new boolean[largestNumber+1];
-		int p = 2;
+		int p = 1;
 		
 		//Initialize array as all numbers are prime (true)
 		for(int i = 0; i <= numberStatus.length-1; i++){
 			numberStatus[i] = true;
 		}
 		
-		
-		for(int i = 2*p; i <= numberStatus.length; i = p+i){
-			System.out.println("Remove: " + i);
-			numberStatus[i-2] = false;
+		//Find the next value of p (The next true index)
+		for(int j = p+1; j <= numberStatus.length; j++){
+			if(numberStatus[j]){
+				p = j;
+				//Mark all multiples of p as false
+				for(int i = 2*p; i <= numberStatus.length; i = p+i){
+					System.out.println("Remove: " + i);
+					numberStatus[i-2] = false;
+				}
+			}
 		}
 
-		
 		//Print all elements in array
 //		System.out.println("");
 //		System.out.println("Final Array:");
