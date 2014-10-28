@@ -1,0 +1,73 @@
+class StatCalc {
+
+    private int count;   // Number of numbers that have been entered.
+    private double sum;  // The sum of all the items that have been entered.
+    private double squareSum;  // The sum of the squares of all the items.
+
+    public void enter(double num) {
+        count++;
+        sum += num;
+        squareSum += num*num;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public double getSum() {
+        return sum;
+    }
+
+    public double getMean() {
+        return sum / count;  
+    }
+
+    public double getStandardDeviation() {  
+        double mean = getMean();
+        return Math.sqrt( squareSum/count - mean*mean );
+    }
+
+}
+
+class MyStatCalc extends StatCalc{
+
+	private double max = 0.0;
+	private double min = 0.0;
+	
+    public void enter(double num) {
+        super.enter(num);
+        if(this.getCount() == 1){
+        	
+        }
+        if(num >= max){
+        	max = num;
+        }else if(num <= min){
+        	min = num;
+        }
+    }
+	
+    public double getMax(){
+    	return max;
+    }
+    
+    public double getMin(){
+    	return min;
+    }
+    
+}
+
+public class testCalc{
+	
+	public static void main(String[] args){
+	
+		MyStatCalc calc = new MyStatCalc();
+		
+		calc.enter(2.6);
+		calc.enter(5.3);
+		calc.enter(52.0);
+		calc.enter(-1.3);
+		System.out.println("Max is: " + calc.getMax());
+		System.out.println("Min is: " + calc.getMin());
+		
+	}
+}
