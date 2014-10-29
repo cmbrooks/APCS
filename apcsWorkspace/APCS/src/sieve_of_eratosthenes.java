@@ -30,7 +30,7 @@ public class sieve_of_eratosthenes {
 		//Print all prime numbers in range
 		System.out.println("");
 		System.out.println("Prime Numbers:");
-		for(int i = 0; i <= numberStatus.length-1; i++){
+		for(int i = 0; i < numberStatus.length; i++){
 			if(numberStatus[i] == true){
 				System.out.println(i);
 			}
