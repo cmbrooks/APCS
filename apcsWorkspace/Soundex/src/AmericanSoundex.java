@@ -41,78 +41,98 @@ public class AmericanSoundex {
 	 */
 	public static String getSoundex( String name ) {
 		String soundex = "";
-				
-		// TODO:
-		// Implement the soundex algorithm here.
-		// If you need a helper method for part of the algorithm, you may create a 
-		// private static method. 
-		//
-		
-//		char[] soundexList = new char[10];
+						
 		char[] nameCharList = name.toCharArray();
 		soundex = soundex + nameCharList[0];
-		System.out.println("First letter is '" + soundex + "'");
+		soundex = soundex.toUpperCase();
+//		System.out.println("First letter is '" + soundex + "'");
 		
-		System.out.print("Word is '");
-		System.out.print(nameCharList);
-		System.out.println("'");
+//		System.out.print("Word is '");
+//		System.out.print(nameCharList);
+//		System.out.println("'");
 		
 		/*Removes all first tier letters*/
-		for(int i = 0; i < name.length(); i++){
-			if (nameCharList[i] == 'a'
-					|| nameCharList[i] == 'e'
-					|| nameCharList[i] == 'i'
-					|| nameCharList[i] == 'o'
-					|| nameCharList[i] == 'u'
-					|| nameCharList[i] == 'y'
-					|| nameCharList[i] == 'h'
-					|| nameCharList[i] == 'w'){
-				System.out.println("Remove the letter " + nameCharList[i] + " at index " + i);
-				/*TODO:
-				 * Add code that removes the letter at a given index
-				*/			
-			} else if (nameCharList[i] == 'b'
-						|| nameCharList[i] == 'f'
-						|| nameCharList[i] == 'p'
-						|| nameCharList[i] == 'v'
-					){
-				soundex.concat("1");
-				System.out.println("Because index " + i + " is " + nameCharList[i] + ", the number 1 was added to soundexList");
-				System.out.println("Current soundex is: " + soundex);
-			} else if (nameCharList[i] == 'c'
-						|| nameCharList[i] == 'g'
-						|| nameCharList[i] == 'j'
-						|| nameCharList[i] == 'k'
-						|| nameCharList[i] == 'q'
-						|| nameCharList[i] == 's'
-						|| nameCharList[i] == 'x'
-						|| nameCharList[i] == 'z'
-					){
-				soundex.concat("2");
-				System.out.println("Because index " + i + " is " + nameCharList[i] + ", the number 2 was added to soundexList");
-				System.out.println("Current soundex is: " + soundex);
-			} else if (nameCharList[i] == 'd' || nameCharList[i] == 't'){
-				soundex.concat("3");
-				System.out.println("Because index " + i + " is " + nameCharList[i] + ", the number 3 was added to soundexList");
-				System.out.println("Current soundex is: " + soundex);
-			} else if (nameCharList[i] == 'l'){
-				soundex.concat("4");
-				System.out.println("Because index " + i + " is " + nameCharList[i] + ", the number 4 was added to soundexList");
-				System.out.println("Current soundex is: " + soundex);
-			} else if (nameCharList[i] == 'm' || nameCharList[i] == 'n'){
-				soundex.concat("5");
-				System.out.println("Because index " + i + " is " + nameCharList[i] + ", the number 5 was added to soundexList");
-				System.out.println("Current soundex is: " + soundex);
-			}else if (nameCharList[i] == 'r'){
-				soundex.concat("6");
-				System.out.println("Because index " + i + " is " + nameCharList[i] + ", the number 6 was added to soundexList");
-				System.out.println("Current soundex is: " + soundex);
+		for(int i = 1; i < name.length(); i++){
+			if (i > 0){
+				if (nameCharList[i] == nameCharList[i-1]){
+					//Do nothing
+					System.out.println("Rule 3 applies");
+				} else {
+					soundex += getSoundexVal(nameCharList[i], i);
+				}
+			} else if (i > 1){
+				if ( (nameCharList[i-1] == 'h' || nameCharList[i-1] == 'w') && nameCharList[i-2] == nameCharList[i]){
+					//Do nothing
+					System.out.println("Rule 3 applies");
+				}
+			}else{
+				soundex += getSoundexVal(nameCharList[i], i);
 			}
 			
 		}
 		
-		System.out.println("The current soundex is: " + soundex);
+		if (soundex.length() < 4){
+			//Fill in with 0's
+			System.out.println("The soundex is too short and will be filled with 0's");
+			for(int fillLen = 4 - soundex.length(); fillLen > 0; fillLen--){
+				soundex += "0";
+			}
+		} else if (soundex.length() >4){
+			//Truncate to 4 digits
+			System.out.println("The soundex is too long, it will be truncated to 1 letter and 3 numbers");
+			soundex = soundex.substring(0, 4);
+		}
 		
 		return soundex;
+	}
+	
+	private static String getSoundexVal(char soundexChar, int i){
+		
+		String soundexVal = "";
+		
+		if (soundexChar == 'a'
+				|| soundexChar == 'e'
+				|| soundexChar == 'i'
+				|| soundexChar == 'o'
+				|| soundexChar == 'u'
+				|| soundexChar == 'y'
+				|| soundexChar == 'h'
+				|| soundexChar == 'w'){
+			System.out.println("Skip the letter " + soundexChar + " at index " + i);	
+			//Do nothing
+		} else if (soundexChar == 'b'
+					|| soundexChar == 'f'
+					|| soundexChar == 'p'
+					|| soundexChar == 'v'
+				){
+			soundexVal = "1";
+			System.out.println("Because index " + i + " is " + soundexChar + ", the number 1 was added to soundexList");
+		} else if (soundexChar == 'c'
+					|| soundexChar == 'g'
+					|| soundexChar == 'j'
+					|| soundexChar == 'k'
+					|| soundexChar == 'q'
+					|| soundexChar == 's'
+					|| soundexChar == 'x'
+					|| soundexChar == 'z'
+				){
+			soundexVal = "2";
+			System.out.println("Because index " + i + " is " + soundexChar + ", the number 2 was added to soundexList");
+		} else if (soundexChar == 'd' || soundexChar == 't'){
+			soundexVal = "3";
+			System.out.println("Because index " + i + " is " + soundexChar + ", the number 3 was added to soundexList");
+		} else if (soundexChar == 'l'){
+			soundexVal = "4";
+			System.out.println("Because index " + i + " is " + soundexChar + ", the number 4 was added to soundexList");
+		} else if (soundexChar == 'm' || soundexChar == 'n'){
+			soundexVal = "5";
+			System.out.println("Because index " + i + " is " + soundexChar + ", the number 5 was added to soundexList");
+		}else if (soundexChar == 'r'){
+			soundexVal = "6";
+			System.out.println("Because index " + i + " is " + soundexChar + ", the number 6 was added to soundexList");
+		}
+				
+		return soundexVal;
+		
 	}
 }
