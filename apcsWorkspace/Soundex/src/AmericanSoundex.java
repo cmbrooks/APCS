@@ -39,6 +39,7 @@ public class AmericanSoundex {
 	 * @param name - a String name to be encoded using the American Soundex algorithm
 	 * @return - a String soundex code
 	 */
+	
 	public static String getSoundex( String name ) {
 		String soundex = "";
 						
@@ -53,23 +54,26 @@ public class AmericanSoundex {
 		String newsoundex = "";
 		
 		for (int i = 0; i < nameCharList.length; i++){
-			if (i == 0){
+			
+			if (i == 0){ 
+				/*Adds the first letter to the beginning of the soundex string*/
 				newsoundex += nameCharList[0];
-			} 
-			else if (getSoundexVal(nameCharList[i]) != getSoundexVal(nameCharList[i-1])){
+			} else if (getSoundexVal(nameCharList[i]) != getSoundexVal(nameCharList[i-1])){
+				/*Adds non-duplicate soundex values to the soundex string*/
 				newsoundex += getSoundexVal(nameCharList[i]);
 				System.out.println("The number " + nameCharList[i] + " is added to the soundex because this soundex val is " + getSoundexVal(nameCharList[i]) + " and the previous letter's value is " + getSoundexVal(nameCharList[i-1]));
 			} else {
+				/*Ignores soundex values that are the same as the soundex value before it*/
 				System.out.println("The duplicate number " + nameCharList[i] + " was skipped at index " + i);
 			}
 		}
 		
 		System.out.println(newsoundex);
 		soundex = newsoundex;
-		System.out.println("Raw soundex is " + soundex);
+		System.out.println("Un-truncated soundex is " + soundex);
 		
 		if (soundex.length() < 4){
-			//Fill in with 0's
+			/*Fill in with 0's*/
 //			System.out.println("The soundex is too short and will be filled with 0's");
 			for(int fillLen = 4 - soundex.length(); fillLen > 0; fillLen--){
 				soundex += "0";
