@@ -1,10 +1,9 @@
+=\=\=\=\=\=\=
+<<<<<<<=Updated upstream
+>>>>>>>=Stashed changes
 EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
 PROBLEMS_FILTERS_MIGRATE=true
 eclipse.preferences.version=1
-<<<<<<< Updated upstream
-platformState=1412712276159
-=======
-platformState=1413251044358
->>>>>>> Stashed changes
+platformState=1412712276164
 quickStart=false
 tipsAndTricks=true
