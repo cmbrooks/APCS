@@ -3,24 +3,27 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="287" key="DIALOG_WIDTH"/>
 		<item value="97" key="DIALOG_Y_ORIGIN"/>
-		<item value="877" key="DIALOG_X_ORIGIN"/>
 		<item value="479" key="DIALOG_HEIGHT"/>
+		<item value="877" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="soundexChar" key="selection"/>
+		<item value="SoundexAnswer" key="selection"/>
 		<list key="findhistory">
+			<item value="americansoundex"/>
+			<item value="american"/>
 			<item value="nameCharList[i]"/>
 			<item value="1000"/>
 			<item value="numberList"/>
 			<item value="np"/>
 		</list>
 		<list key="replacehistory">
+			<item value="SoundexAnswer"/>
 			<item value="soundexChar"/>
 			<item value="100"/>
 			<item value="numberStatus"/>

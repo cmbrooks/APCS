@@ -115,7 +115,7 @@ public class SoundexTest {
 	 */
 	public static void printUSPresidents(String[] lastNames, String[] soundex) {
 		// Field names
-		System.out.println("No.   \tLast Names       \tAmericanSoundex Code");
+		System.out.println("No.   \tLast Names       \tSoundexAnswer Code");
 		
 		// TODO
 		// Traverse the the lastNames and soundex arrays and print the values under the respective field names.

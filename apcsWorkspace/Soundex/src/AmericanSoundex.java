@@ -6,36 +6,39 @@ Cody Brooks
 public class AmericanSoundex {
 
 	public static String getSoundex( String name ) {
+
 		String soundex = "";
 
 		name = name.toLowerCase();
 		char[] nameCharList = name.toCharArray();
-		soundexList = new char[name.length()];
+
 
 		/*Adds soundex values for all letters*/
 		for (int i = 0; i < nameCharList.length; i++){
-			/*Tried changing this to adding elements to an array*/
-			soundexList += getSoundexVal(nameCharList[i]);
+			soundex += getSoundexVal(nameCharList[i]);
 		}
+		System.out.println("Raw soundex is " + soundex);
 
 		/*Remove duplicate numbers*/
-//		String newsoundex = "";
-//		char[] soundexList = soundex.toCharArray();
+		String newsoundex = "";
+		char[] soundexList = soundex.toCharArray();
 
-		for (int i = 0; i < soundexList.length; i++){
-			if (i == 0){
-				/*Add the first letter to the begining of the soundex string*/
-				soundex += nameCharList[0];
-			} else if (soundexList[i] != soundexList[i-1]) {
-				/*Soundex value is unique. Add it to the soundex string*/
-				soundex += soundexList[i];
+		for (int i = 0; i < soundex.length(); i++){
+			if (newsoundex.length() > 0 && soundexList[i-1] == soundexList[i]) {
+				if (isVowel(soundexList[i-1])){
+					newsoundex += soundexList[i];
+				}
 			} else {
-				/*Soundex value is a duplicate. Do nothing*/
+				newsoundex += soundexList[i];
 			}
 		}
 
-//		soundex = newsoundex;
+		soundex = newsoundex;
 		System.out.println("Un-truncated soundex is " + soundex);
+
+
+		/*Replace the first character in the string with the first letter of the word*/
+		soundex = nameCharList[0] + soundex.substring(1, soundex.length());
 
 		if (soundex.length() < 4){
 			/*Fill in with 0's*/
@@ -47,8 +50,10 @@ public class AmericanSoundex {
 			soundex = soundex.substring(0, 4);
 		}
 
+
 		soundex = soundex.toUpperCase();
 		return soundex;
+
 	}
 
 
@@ -69,7 +74,7 @@ public class AmericanSoundex {
 				|| soundexChar == 'f'
 				|| soundexChar == 'p'
 				|| soundexChar == 'v'){
-			soundexVal = '1';
+			soundexVal = "1";
 		} else if (soundexChar == 'c'
 				|| soundexChar == 'g'
 				|| soundexChar == 'j'
@@ -78,7 +83,7 @@ public class AmericanSoundex {
 				|| soundexChar == 's'
 				|| soundexChar == 'x'
 				|| soundexChar == 'z'){
-			soundexVal = '2';
+			soundexVal = "2";
 		} else if (soundexChar == 'd' || soundexChar == 't'){
 			soundexVal = "3";
 		} else if (soundexChar == 'l'){
@@ -90,6 +95,26 @@ public class AmericanSoundex {
 		}
 
 		return soundexVal;
+
+	}
+
+
+	private static boolean isVowel (char soundexChar) {
+		
+		boolean vowel;
+
+		if (soundexChar == 'a'
+				|| soundexChar == 'e'
+				|| soundexChar == 'i'
+				|| soundexChar == 'o'
+				|| soundexChar == 'u'
+				|| soundexChar == 'y'){
+			vowel = true;
+		} else {
+			vowel = false;
+		}
+
+		return vowel;
 
 	}
 
