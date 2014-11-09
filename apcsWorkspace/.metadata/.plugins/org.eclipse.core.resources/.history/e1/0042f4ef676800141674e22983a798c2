@@ -1,0 +1,25 @@
+public class CompareSoundex extends AmericanSoundex implements Comparable<SortSoundex> {
+	String name;
+	String soundex;
+	
+	public int compareTo(String otherSoundex) {
+		int result = -2;
+		char[] oSoundexLs = otherSoundex.toCharArray();
+		
+		for (int i = 0; i < oSoundexLs.length; i++) {
+			
+		} 
+
+		
+		return result;
+	}
+
+	public static String setSoundex (String x) {
+		name = x;
+	}
+
+	public void printSoundex (String x) {
+		System.out.println(setSoundex(x));
+	}
+
+}

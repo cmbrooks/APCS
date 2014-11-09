@@ -1,0 +1,17 @@
+public class CompareSoundex extends AmericanSoundex implements Comparable {
+	
+	public int compareTo(Object obj1) {
+		int result;
+
+		return result;
+	}
+
+	public String setSoundex (String x) {
+		return AmericanSoundex.getSoundex(x);
+	}
+
+	public void printSoundex (String x) {
+		System.out.println(setSoundex(x));
+	}
+
+}
