@@ -11,34 +11,37 @@ public class AmericanSoundex {
 
 		name = name.toLowerCase();
 		char[] nameCharList = name.toCharArray();
-
+		
+		/*Flags all vowels*/
+		boolean[] vowelLs = new boolean[name.length()];
+		for (int i = 0; i < nameCharList.length; i++) {
+			vowelLs[i] = isVowel(nameCharList[i]);
+		}
 
 		/*Adds soundex values for all letters*/
 		for (int i = 0; i < nameCharList.length; i++){
-			soundex += getSoundexVal(nameCharList[i]);
-		}
-		System.out.println("Raw soundex is " + soundex);
 
-		/*Remove duplicate numbers*/
-		String newsoundex = "";
-		char[] soundexList = soundex.toCharArray();
-
-		for (int i = 0; i < soundex.length(); i++){
-			if (newsoundex.length() > 0 && soundexList[i-1] == soundexList[i]) {
-				if (isVowel(soundexList[i-1])){
-					newsoundex += soundexList[i];
-				}
+			if (i == 0) {
+				soundex += nameCharList[0];
 			} else {
-				newsoundex += soundexList[i];
+				if (soundex.length() > 0
+						&& soundex.substring(soundex.length() - 1, soundex.length()).equals(getSoundexVal(nameCharList[i]))) {
+					if (vowelLs[i-1]){
+						soundex += getSoundexVal(nameCharList[i]);
+					}
+				} else {
+					soundex += getSoundexVal(nameCharList[i]);
+				}
 			}
+			
 		}
 
-		soundex = newsoundex;
+//		soundex = newsoundex;
 		System.out.println("Un-truncated soundex is " + soundex);
 
 
 		/*Replace the first character in the string with the first letter of the word*/
-		soundex = nameCharList[0] + soundex.substring(1, soundex.length());
+//		soundex = nameCharList[0] + soundex.substring(1, soundex.length());
 
 		if (soundex.length() < 4){
 			/*Fill in with 0's*/
