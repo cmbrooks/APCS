@@ -1,3 +1,8 @@
+/*
+Cody Brooks
+2014-11-10
+*/
+
 import java.util.Arrays;
 
 public class SortSoundex {
@@ -15,9 +20,9 @@ public class SortSoundex {
 		Create an array of Soundex values of each president name
 		*/
 		String[] soundexList = new String[nameList.length];
-				
+
 		for (int i = 0; i < nameList.length; i++) {
-			soundexList[i] = SoundexComparable.getSoundex(nameList[i]);
+			soundexList[i] = SoundexComparableS.getSoundex(nameList[i]);
 		}
 
 		/*
@@ -25,7 +30,7 @@ public class SortSoundex {
 		Use built in Java Arrays.sort() function to sort soundexes
 		*/
 		Arrays.sort(soundexList);
-		
+
 		/*
 		Step 4:
 		Print sorted array
@@ -35,23 +40,23 @@ public class SortSoundex {
 		}
 
 	}
-	
+
 }
 
 
-class SoundexComparable extends AmericanSoundex implements Comparable<SoundexComparable> {
+class SoundexComparableS extends AmericanSoundexS implements Comparable<SoundexComparableS> {
 	String name;
 	String soundex;
-	
-	public int compareTo(SoundexComparable otherSoundex) {		
+
+	public int compareTo(SoundexComparableS otherSoundex) {
 		return this.soundex.compareTo(otherSoundex.getSoundex());
 	}
 
 	public void setSoundex (String x) {
 		this.name = x;
-		this.soundex = AmericanSoundex.getSoundex(x);
+		this.soundex = AmericanSoundexS.getSoundex(x);
 	}
-	
+
 	public String getSoundex () {
 		return soundex;
 	}
@@ -62,7 +67,7 @@ class SoundexComparable extends AmericanSoundex implements Comparable<SoundexCom
 
 }
 
-class AmericanSoundex {
+class AmericanSoundexS {
 
 	public static String getSoundex( String name ) {
 
@@ -70,7 +75,7 @@ class AmericanSoundex {
 
 		name = name.toLowerCase();
 		char[] nameCharList = name.toCharArray();
-		
+
 		/*Flags all vowels*/
 		boolean[] vowelLs = new boolean[name.length()];
 		for (int i = 0; i < nameCharList.length; i++) {
@@ -93,10 +98,10 @@ class AmericanSoundex {
 				}
 			}
 		}
-		
+
 		/*Replaces the first value with the first letter*/
 		soundex = nameCharList[0] + soundex.substring(1, soundex.length());
-		
+
 		/*Replace the first character in the string with the first letter of the word*/
 		if (soundex.length() < 4){
 			/*Fill in with 0's*/
@@ -158,7 +163,7 @@ class AmericanSoundex {
 
 
 	private static boolean isVowel (char soundexChar) {
-		
+
 		boolean vowel;
 
 		if (soundexChar == 'a'
@@ -227,10 +232,10 @@ class USPresidentNames {
 		"Bush",
 		"Obama"
 	};
-	
+
 	/** Get a copy of the last names. */
 	public static String[] getLastNames() {
-		
+
 		// The clone() method is inherited from the super class java.lang.Object
 		// It makes a copy of the lastNames
 		return lastNames.clone();
