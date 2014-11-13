@@ -7,22 +7,22 @@ public class matrixmath {
 
   public static void main (String[] args){
 	  /*Setup inputs*/
-    int[][] A = {
-			  		  {2,5,7},
-					  {7,3,9},
-					  {7,2,8}
-	  			  };
+	  int[][] A = {
+			  {2,5,7},
+			  {7,3,9},
+			  {7,2,8}
+	  };
 	  int[][] B = {
-			  		  {2,5,7},
-					  {7,3,9},
-					  {7,2,8}
-	  			  };
-	  int p = 2;
+			  {3,6,9},
+			  {2,2,8},
+			  {1,6,7}
+	  };
+	  int p = 7;
 
-	  int[][] resultArray = MatMath.mult(A, B);
+	  int[][] resultArray = MatMath.mult(A, p);
 
 	  /*Print the result array*/
-	  System.out.println("Multiplication of A + B:");
+	  System.out.println("Result Array:");
 	  for (int i = 0; i < resultArray.length; i++) {
 		  for (int j = 0; j < resultArray[0].length; j++) {
 			  System.out.print("\t" + resultArray[i][j]);
@@ -124,8 +124,8 @@ class MatMath {
 
   /*Matrix Multiplication*/
   static int [][] mult (int[][] A, int[][] B){
-  	if ( checkMat(A) && checkMat(b) && canMult(A, B) ) {
       int[][] result = new int[ A[0].length ][ B.length ];
+	  if ( checkMat(A) && checkMat(B) && canMult(A, B) ) {
     	int multSum = 0;
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A[i].length; j++) {
@@ -133,12 +133,13 @@ class MatMath {
                 multSum += ( A[i][k] * B[k][j] );
               }
               result[i][j] = multSum;
+              multSum = 0;
             }
           }
       } else {
-        Stystem.out.println("A and B cannot be multiplied");
+        System.out.println("A and B cannot be multiplied");
       }
-	  return result;
+	return result;
   }
 
   /*Ensures that the given matrix has a valid size*/
