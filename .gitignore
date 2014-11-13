@@ -1,9 +1,9 @@
 ###Ignore Files###
 
-#All Eclipse metadata files
-apcsWorkspace/.metadata/
+##All Eclipse metadata files
+#apcsWorkspace/.metadata/
 
-#All packaged archives
+##All packaged archives
 *.zip
 *.7z
 *.tar.gz
