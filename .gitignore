@@ -1,7 +1,16 @@
 ###Ignore Files###
 
-##All Eclipse metadata files
-#apcsWorkspace/.metadata/
+# eclipse specific git ignore
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
 
 ##All packaged archives
 *.zip
