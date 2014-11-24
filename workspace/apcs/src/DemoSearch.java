@@ -3,9 +3,6 @@
  * This class demonstrated sequential and binary searching algorithms.
  * 
  */
-
-package common;
-
 public class DemoSearch {
 
 	/**

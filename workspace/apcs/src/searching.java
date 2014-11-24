@@ -1,35 +1,42 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class searching {
-	
+
     public static void main(String[] args) {
 
         /*Creates stats for the target student*/
         Student targetStudent = new Student("John", "Doe", 3.97);
+
         /*Initializes student roster*/
         ArrayList<Student> classRoster = generateRoster();
-        System.out.println("Class roster:");
-        System.out.println(classRoster);
 
-        System.out.println(Student.getName(targetStudent) + " was found at index " + MyDemoSearch.sequentialStudentSearch(classRoster, targetStudent)
-                            + " using sequential searching");
-        System.out.println(Student.getName(targetStudent) + " was found at index " + MyDemoSearch.binaryStudentSearch(classRoster, targetStudent)
-                            + " using binary searching");
+        /*Search list for target*/
+        System.out.println("Starting sequential search");
+        System.out.print("Target student " + targetStudent.getName() + " was found at index ");
+        System.out.println(MyDemoSearch.sequentialListSearch(classRoster, targetStudent));
+        System.out.println();
+
+        System.out.println("Starting binary search");
+        System.out.print("Target student " + targetStudent.getName() + " was found at index ");
+        System.out.println(MyDemoSearch.binaryListSearch(classRoster, targetStudent));
+
+
     }
 
     private static ArrayList<Student> generateRoster () {
         ArrayList<Student> roster = new ArrayList<Student>();
         Student student1 = new Student("Jane", "Doe", 3.50);
-        roster.add(student1);
         Student student2 = new Student("Cookie", "Doe", 2.80);
-        roster.add(student2);
         Student student3 = new Student("John", "Doe", 3.97);
-        roster.add(student3);
         Student student4 = new Student("Do-si", "Doe", 3.50);
-        roster.add(student4);
         Student student5 = new Student("Play", "Doe", 4.13);
-        roster.add(student5);
         Student student6 = new Student("Tae Kwon", "Doe", 3.75);
+        roster.add(student1);
+        roster.add(student2);
+        roster.add(student3);
+        roster.add(student4);
+        roster.add(student5);
         roster.add(student6);
         return roster;
     }
@@ -38,17 +45,17 @@ public class searching {
 
 class MyDemoSearch extends DemoSearch{
 
-    public static int sequentialStudentSearch (ArrayList<Student> studentList, Student target) {
+    public static int sequentialListSearch (ArrayList<Student> studentList, Student target) {
         for (int i = 0; i < studentList.size(); i++) {
             if (target.compareTo(studentList.get(i)) == 0) {
-                return i;
+            	return i;
             }
         }
         /*If the target is not found*/
         return -1;
     }
 
-    public static int binaryStudentSearch (ArrayList<Student> studentList, Student target) {
+    public static int binaryListSearch (ArrayList<Student> studentList, Student target) {
         /*Makes sure studentList is sorted in ascending order*/
         java.util.Collections.sort(studentList);
 
@@ -74,9 +81,9 @@ class MyDemoSearch extends DemoSearch{
         return -1;
     }
 
-    public int sequentialTSearch (ArrayList<T> tList, Student target) {
-        for (int i = 0; i < tList.size(); i++) {
-            if (tList.get(i) == target) {
+    public int sequentialArraySearch (Student[] studentArray, Student target) {
+        for (int i = 0; i < studentArray.length; i++) {
+            if (studentArray[i] == target) {
                 return i;
             }
         }
@@ -84,20 +91,20 @@ class MyDemoSearch extends DemoSearch{
         return -1;
     }
 
-    public int binaryTSearch (ArrayList<T> tList, Student target) {
+    public int binaryArraySearch (Student[] studentArray, Student target) {
         /*Makes sure studentList is sorted in ascending order*/
-        java.util.Collections.sort(tList);
+        Arrays.sort(studentArray);
 
         int left = 0;
-        int right = tList.size() - 1;
+        int right = studentArray.length - 1;
 
         while (left <= right) {
             int middle = (left + right) / 2;
 
-            if (target.compareTo(tList.get(middle)) < 0) {
+            if (target.compareTo(studentArray[middle]) < 0) {
                 /*Limits the search to the left half of the ArrayList*/
                 right = middle - 1;
-            } else if (target.compareTo(tList.get(middle)) > 0) {
+            } else if (target.compareTo(studentArray[middle]) > 0) {
                 /*Limits the search to the right half of the ArrayList*/
                 left = middle + 1;
             } else {
@@ -113,11 +120,11 @@ class MyDemoSearch extends DemoSearch{
 }
 
 class Student implements Comparable<Student> {
-	
-	static String firstName;
-	static String lastName;
-	static double gpa;
-	
+
+	String firstName;
+	String lastName;
+	double gpa;
+
 	public Student (String newFirstName, String newLastName, double newGPA) {
 		firstName = newFirstName;
 	    lastName = newLastName;
@@ -126,12 +133,15 @@ class Student implements Comparable<Student> {
 
     /*Need to test this comparable method*/
     public int compareTo (Student otherStudent) {
-        if (gpa > this.getGPA(otherStudent)) {
+        if (gpa > otherStudent.getGPA()) {
             return 1;
-        } else if (gpa < this.getGPA(otherStudent)) {
+        } else if (gpa < otherStudent.getGPA()) {
             return -1;
-        } else {
+        } else if (gpa == otherStudent.getGPA()){
             return 0;
+        } else {
+        	/*Error*/
+        	return -2;
         }
     }
 
@@ -143,8 +153,8 @@ class Student implements Comparable<Student> {
         lastName = newName;
     }
 
-    public static String getName (Student student) {
-        String fullName = firstName + ", " + lastName;
+    public String getName() {
+        String fullName = firstName + " " + lastName;
         return fullName;
     }
 
@@ -152,7 +162,7 @@ class Student implements Comparable<Student> {
         gpa = newGPA;
     }
 
-    public double getGPA (Student student) {
+    public double getGPA() {
         return gpa;
     }
 }
