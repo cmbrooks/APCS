@@ -1,10 +1,13 @@
-#Scalar Addition
+#Scalar Addition ~~ WORKS
 def add (A, p):
-#    result = {}{}
+    result = [[0 for x in range(len(A))] for x in range(len(A[0]))]
     if checkMat(A) == True:
-        for i in A:
-            for j in A[i]:
+        print "Number of Rows: " + str(len(A))
+        print "Number of Columns: " + str(len(A[0]))
+        for i in range(0, len(A)):
+            for j in range(0, len(A[i])):
                 result[i][j] = A[i][j] + p
+                print str(i) + " and " + str(j)
     else:
         print "The input A is an invalid matrix"
     return result
