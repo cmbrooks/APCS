@@ -14,14 +14,14 @@ SRCNAME=$FLNM.java
 echo "Enter the package the file is a part of"
 read PCKGDIR
 MAINDIR="$PWD"
-if [ $PCKGJDIR == "default" ]; then
+if [ $PCKGDIR = "default" ]; then
     echo "Default"
     COMPDIR="$MAINDIR/bin"
     SRCDIR="$MAINDIR/src"
 else
     echo "Not Default"
-    COMPDIR="$MAINDIR/$PCKGDIR/bin"
-    SRCDIR="$MAINDIR/$PCKGDIR/src"
+    COMPDIR="$MAINDIR/bin/$PCKGDIR"
+    SRCDIR="$MAINDIR/src/$PCKGDIR"
 fi
 
 #Compile .java file from the src folder into the bin folder and run the .class file

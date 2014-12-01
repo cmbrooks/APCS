@@ -17,3 +17,6 @@ tmp/**/*
 *.7z
 *.tar.gz
 *.tar.bz2
+
+##Cloud9 ignore
+.c9/**
