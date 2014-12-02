@@ -15,11 +15,9 @@ echo "Enter the package the file is a part of"
 read PCKGDIR
 MAINDIR="$PWD"
 if [ $PCKGDIR = "default" ]; then
-    echo "Default"
     COMPDIR="$MAINDIR/bin"
     SRCDIR="$MAINDIR/src"
 else
-    echo "Not Default"
     COMPDIR="$MAINDIR/bin/$PCKGDIR"
     SRCDIR="$MAINDIR/src/$PCKGDIR"
 fi
