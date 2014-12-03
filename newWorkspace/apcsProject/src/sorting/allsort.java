@@ -4,19 +4,12 @@ public class allsort {
     
     public static void main (String[] args) {
         
-        System.out.println("Program started");
-        int[] array1 = generate(10);
+        int[] array1 = generate(1000);
         
         if (checkSort(select(array1))) {
-            System.out.println("Your program worked, Congratulations!");
+            System.out.println(true);
         } else {
-            System.out.println("You still need to work some kinks out...");
-            System.out.println("**********");
-            
-            System.out.println("Unsorted array:");
-            printArray(array1);
-            System.out.println("Sorted array:");
-            printArray(select(array1));
+            System.out.println(false);
         }
         
     }
@@ -34,7 +27,7 @@ public class allsort {
     public static boolean checkSort (int[] array) {
         boolean status = false;
         for(int i = 1; i < array.length; i++) {
-            if (array[i] > array[i - 1]) {
+            if (array[i] >= array[i - 1]) {
                 status = true;
             } else {
                 status = false;
@@ -44,36 +37,28 @@ public class allsort {
         return status;
     }
     
-    /*This still needs some work*/
-    public static int[] duplicate (int[] a) {
-        int[] b = new int[a.length];
-        b = a;
-        return b;
-    }
-    
-    public static int[] select (int[] unsortArray) {
+    public static int[] select (int[] array) {
         
-        int[] sortArray = unsortArray;
-        int maxIndex = -1;
+        int minIndex = -1;
         int temp = -1;
-        int unsortedLen = sortArray.length - 1;
-        
+
         /*Sort array using select sorting*/
-        for (int i = sortArray.length - 1; i > 1; i--) {
-            maxIndex = 0;
-            for (int j = 1; j < unsortedLen; j++) {
-                if (sortArray[maxIndex] < sortArray[j]) {
-                    maxIndex = j;
+        for (int firstPlace = 0; firstPlace < array.length - 1; firstPlace++) {
+            
+            minIndex = array.length - 1;
+            for (int j = array.length - 1; j >= firstPlace; j--) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
                 }
             }
             
-            temp = sortArray[i];
-            sortArray[i] = sortArray[maxIndex];
-            sortArray[maxIndex] = temp;
-            unsortedLen--;
+            temp = array[minIndex];
+            array[minIndex] = array[firstPlace];
+            array[firstPlace] = temp;
+            
         }
         
-        return sortArray;
+        return array;
         
     }
     

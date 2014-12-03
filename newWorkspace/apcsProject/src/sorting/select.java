@@ -2,7 +2,7 @@ public class select {
     
     public static void main (String[] args) {
         
-        int[] sortArray = generate(100000);
+        int[] sortArray = generate(4);
         int minIndex = -1;
         int temp = -1;
         
@@ -13,11 +13,11 @@ public class select {
         /*Sort array using select sorting*/
         for (int firstPlace = 0; firstPlace < sortArray.length - 1; firstPlace++) {
             minIndex = sortArray.length - 1;
-            System.out.println("Outer for loop itteration: " + firstPlace);
-            for (int j = firstPlace + 1; j < sortArray.length; j++) {
+            System.out.println("Sort line: " + firstPlace);
+            for (int j = sortArray.length - 1; j >= firstPlace; j--) {
                 System.out.println("Inner For loop itteration: " + j);
                 System.out.println("Number being compared: " + sortArray[minIndex]);
-                System.out.println("Element at index j: " + sortArray[j]);
+                System.out.println("Element at index j (" + j + "): " + sortArray[j]);
                 if (sortArray[j] < sortArray[minIndex]) {
                     System.out.print(sortArray[j] + " is less than " + sortArray[minIndex]);
                     minIndex = j;
