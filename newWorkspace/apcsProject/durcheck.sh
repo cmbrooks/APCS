@@ -2,6 +2,19 @@
 
 echo "script started"
 
+#Determine the number of times the java program is run
+if [ $1 = "-n" ]; then
+    RUNCOUNT=10
+elif [ $1 = "" ]; then
+    RUNCOUNT=10
+elif [ $1 = "-e" ]; then
+    RUNCOUNT=50
+elif [ $1 = "-s" ]; then
+    RUNCOUNT=5
+elif [ $1 = "-u" ]; then
+    RUNCOUNT=100
+fi
+
 #Determine name of the Java file
 echo "Please type the name of the file without the file extension:"
 FLNM="test"
@@ -28,16 +41,18 @@ echo "Compiled Successfuly, checking program for consistancy."
 cd $COMPDIR
 
 COUNTER=0
-STATUS="Program is inconsistant."
-while [  $COUNTER -lt 10 ]; do
-    if [ $(java $FLNM) = "true" ]; then
-        STATUS="Program is consistant."
+STATUS=" is inconsistant."
+
+EXPECT=$(java $FLNM)
+while [  $COUNTER -lt $(($RUNCOUNT-1)) ]; do
+    if [ $(java $FLNM) = $EXPECT ]; then
+        STATUS=" is consistant."
     else
-        STATUS="Program is inconsistant."
+        STATUS=" is inconsistant."
         break
     fi
     let COUNTER=COUNTER+1 
 done
 
-echo $STATUS
+echo "Program was ran $RUNCOUNT times, and $STATUS"
 echo "script finished"
