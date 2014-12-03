@@ -1,15 +1,22 @@
+import java.util.Arrays;
 import java.lang.Math;
 
 public class allsort {
     
     public static void main (String[] args) {
         
-        int[] array1 = generate(1000);
+        int[] array1 = generate(10);
         
-        if (checkSort(select(array1))) {
-            System.out.println(true);
+        int[] array2 = array1.clone();
+        
+        if (array1 == array2) {
+            System.out.println("Results are void, arrays 1 and 2 are the same");
+        }
+        
+        if (checkSort(insertion(array1)) && checkSort(select(array2))) {
+            System.out.println("Sorted correctly");
         } else {
-            System.out.println(false);
+            System.out.println("Not sorted correctly");
         }
         
     }
@@ -60,6 +67,23 @@ public class allsort {
         
         return array;
         
+    }
+    
+    public static int[] insertion (int[] array) {
+        int temp = -1;
+        
+        for (int sortLine = 1; sortLine < array.length; sortLine++) {
+            int sortIndex = sortLine; 
+            while (sortIndex > 0 && array[sortIndex] < array[sortIndex - 1]) {
+                /*Swap elements*/
+                temp = array[sortIndex];
+                array[sortIndex] = array[sortIndex - 1];
+                array[sortIndex - 1] = temp;
+                
+                sortIndex--;
+            }
+        }
+        return array;
     }
     
     public static void printArray (int[] array) {

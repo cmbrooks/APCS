@@ -45,10 +45,11 @@ STATUS=" is inconsistant."
 
 EXPECT=$(java $FLNM)
 while [  $COUNTER -lt $(($RUNCOUNT-1)) ]; do
-    if [ $(java $FLNM) = $EXPECT ]; then
+    if [ "$(java $FLNM)" = "$EXPECT" ]; then
         STATUS=" is consistant."
     else
         STATUS=" is inconsistant."
+        echo "Expected output: $EXPECT"
         break
     fi
     let COUNTER=COUNTER+1 
