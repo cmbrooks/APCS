@@ -3,9 +3,9 @@
 echo "script started"
 
 #Determine the number of times the java program is run
-if [ $1 = "-n" ]; then
+if [ $1 = ]; then
     RUNCOUNT=10
-elif [ $1 = "" ]; then
+elif [ $1 = "-n" ]; then
     RUNCOUNT=10
 elif [ $1 = "-e" ]; then
     RUNCOUNT=50
@@ -13,6 +13,8 @@ elif [ $1 = "-s" ]; then
     RUNCOUNT=5
 elif [ $1 = "-u" ]; then
     RUNCOUNT=100
+elif [ $1 = "-c" ]; then
+    RUNCOUNT=$2
 fi
 
 #Determine name of the Java file
