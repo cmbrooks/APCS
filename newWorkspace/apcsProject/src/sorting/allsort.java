@@ -8,12 +8,13 @@ public class allsort {
         int[] array1 = generate(10);
         
         int[] array2 = array1.clone();
+        int[] array3 = array1.clone();
         
         if (array1 == array2) {
             System.out.println("Results are void, arrays 1 and 2 are the same");
         }
         
-        if (checkSort(insertion(array1)) && checkSort(select(array2))) {
+        if ( checkSort( insertion(array1) ) && checkSort( select(array2) ) && checkSort( bubble(array3) ) ) {
             System.out.println("Sorted correctly");
         } else {
             System.out.println("Not sorted correctly");
@@ -45,13 +46,10 @@ public class allsort {
     }
     
     public static int[] select (int[] array) {
-        
         int minIndex = -1;
         int temp = -1;
-
         /*Sort array using select sorting*/
         for (int firstPlace = 0; firstPlace < array.length - 1; firstPlace++) {
-            
             minIndex = array.length - 1;
             for (int j = array.length - 1; j >= firstPlace; j--) {
                 if (array[j] < array[minIndex]) {
@@ -64,14 +62,11 @@ public class allsort {
             array[firstPlace] = temp;
             
         }
-        
         return array;
-        
     }
     
     public static int[] insertion (int[] array) {
         int temp = -1;
-        
         for (int sortLine = 1; sortLine < array.length; sortLine++) {
             int sortIndex = sortLine; 
             while (sortIndex > 0 && array[sortIndex] < array[sortIndex - 1]) {
@@ -81,6 +76,20 @@ public class allsort {
                 array[sortIndex - 1] = temp;
                 
                 sortIndex--;
+            }
+        }
+        return array;
+    }
+    
+    public static int[] bubble (int[] array) {
+        int temp = -1;
+        for (int i = array.length; i > 0; i--) {
+            for (int j = 1; j < i; j++) {
+                if (array[j] < array[j - 1]) {
+                    temp = array[j];
+                    array[j] = array[j - 1];
+                    array[j - 1] = temp;
+                }
             }
         }
         return array;
