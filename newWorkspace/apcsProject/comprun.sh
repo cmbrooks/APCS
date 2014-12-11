@@ -29,9 +29,7 @@ javac -d $COMPDIR $SRCNAME
 echo "Compiled Successfuly, running program"
 cd $COMPDIR
 echo "###########"
-OUTPUT=$(java $FLNM)
-echo $OUTPUT
-##Log Output to custom file
+java $FLNM
 echo "###########"
 echo "Program finished running"
 

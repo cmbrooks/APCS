@@ -15,10 +15,12 @@ public class merge {
     
     public static int[] msort (int[] array, int min, int max) {
         
-        int mid = (max + min) / 2;
-        msort(array, min, mid);
-        msort(array, mid, max);
-        merge(array, min, mid, max);
+        if (min < max) {
+            int mid = ((max + min) / 2);
+            msort(array, min, mid);
+            msort(array, mid + 1, max);
+            merge(array, min, mid, max);
+        }
         
         return array;
         
