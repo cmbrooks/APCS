@@ -8,15 +8,18 @@ getTime() {
     date +%F" "%r
 }
 
-startWatch() {
-    startTime=$(date +%T)
+STSRT=0
+startTimer() {
+    START=$(date +%s%N)
     echo "Clock started at: $startTime"
 }
 
 getElapsedTime() {
-    stopTime=$(date +%T)
-    elapsedTime=$($stopTime-$startTime)
-    echo $elapsedTime
+    END=$(date +%s%N)
+    ELAPSED=($(($END - $START)) / 100000000)
+    echo "Start Time: $START"
+    echo "End Time: $END"
+    echo "Elapsed Time (In nanoseconds): $ELAPSED"
 }
 
 log() {
@@ -53,7 +56,7 @@ cd $SRCDIR
 javac -d $COMPDIR $SRCNAME
 echo "Compiled Successfuly, running program"
 cd $COMPDIR
-startTime
+startTimer
 echo "###########"
 OUTPUT=$(java $FLNM)
 echo "$OUTPUT"

@@ -1,0 +1,12 @@
+insertion.java
+2014-12-19 04:55:30 PM
+Unsorted array
+0
+22
+63
+96
+Sorted Array
+0
+22
+63
+96
