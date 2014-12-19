@@ -2,7 +2,7 @@ public class bubble {
     
     public static void main (String[] args) {
         
-        int[] array = generate(5);
+        int[] array = generate(100);
         int temp = -1;
         
         for (int i = array.length; i > 0; i--) {

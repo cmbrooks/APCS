@@ -18,7 +18,7 @@ public class merge {
         if (min < max) {
             int mid = ((max + min) / 2);
             msort(array, min, mid);
-            msort(array, mid + 1, max);
+            msort(array, mid, max);
             merge(array, min, mid, max);
         }
         
@@ -36,13 +36,19 @@ public class merge {
         int k = 0;
         
         while (lMin < lMax && rMin < rMax) {
+            System.out.print("Left Min: " + lMin + "\t");
+            System.out.println("Right Min: " + rMin);
+            System.out.print("Left Max: " + lMax + "\t");
+            System.out.println("Right Max: " + rMax);
             
             if (array[lMin] < array[rMin]) {
                 B[k] = array[lMin];
+                System.out.println("Added to B[]: " + array[lMin]);
                 lMin++;
                 k++;
             } else {
                 B[k] = rMin;
+                System.out.println("Added to B[]: " + array[rMin]);
                 rMin++;
                 k++;
             }

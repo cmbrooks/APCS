@@ -4,7 +4,32 @@
 
 echo "script started"
 
+getTime() {
+    date +%F" "%r
+}
+
+startWatch() {
+    startTime=$(date +%T)
+    echo "Clock started at: $startTime"
+}
+
+getElapsedTime() {
+    stopTime=$(date +%T)
+    elapsedTime=$($stopTime-$startTime)
+    echo $elapsedTime
+}
+
+log() {
+    NUMOFLOGS=$(ls -l | wc -l)
+    LOGFIILE=runlog$NUMOFLOGS.txt
+    echo "$FLNM.java" >> $LOGFIILE
+    getTime >> $LOGFIILE
+    echo "$OUTPUT" >> $LOGFIILE
+    echo "Log Complete"
+}
+
 #Determine name of the Java file
+
 echo "Please type the name of the file without the file extension:"
 FLNM="test"
 read FLNM
@@ -28,9 +53,15 @@ cd $SRCDIR
 javac -d $COMPDIR $SRCNAME
 echo "Compiled Successfuly, running program"
 cd $COMPDIR
+startTime
 echo "###########"
-java $FLNM
+OUTPUT=$(java $FLNM)
+echo "$OUTPUT"
 echo "###########"
+getElapsedTime
 echo "Program finished running"
-
+#back to log folder
+cd ../..
+cd logFiles
+log
 echo "script finished"
