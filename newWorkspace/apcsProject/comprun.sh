@@ -17,17 +17,24 @@ startTimer() {
 getElapsedTime() {
     END=$(date +%s%N)
     ELAPSED=($(($END - $START)) / 100000000)
-    echo "Start Time: $START"
-    echo "End Time: $END"
+    echo "Start Time: $(date +"%r")"
+    echo "End Time: $(date +"%r")"
     echo "Elapsed Time (In nanoseconds): $ELAPSED"
+    echo "Elapsed Time (In seconds) : $(bc <<< "scale=10; $ELAPSED / 1000000000")"
 }
 
 log() {
+	if [ ! -d $FLNM ]; then
+		mkdir $FLNM
+	fi
+	cd $FLNM
     NUMOFLOGS=$(ls -l | wc -l)
-    LOGFIILE=runlog$NUMOFLOGS.txt
-    echo "$FLNM.java" >> $LOGFIILE
-    getTime >> $LOGFIILE
-    echo "$OUTPUT" >> $LOGFIILE
+    LOGFILE=$FLNM-$NUMOFLOGS.txt
+    echo "$FLNM.java" >> $LOGFILE
+    getTime >> $LOGFILE
+    echo "$OUTPUT" >> $LOGFILE
+	echo "~=~" >> $LOGFILE
+	getElapsedTime >> $LOGFILE
     echo "Log Complete"
 }
 
@@ -64,7 +71,6 @@ echo "###########"
 getElapsedTime
 echo "Program finished running"
 #back to log folder
-cd ../..
-cd logFiles
+cd $MAINDIR/logFiles
 log
 echo "script finished"
