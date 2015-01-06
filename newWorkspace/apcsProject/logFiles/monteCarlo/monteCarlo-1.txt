@@ -1,0 +1,10 @@
+monteCarlo.java
+2015-01-05 07:24:48 PM
+Number of points inside the circle: 78617
+Total points: 100000
+Estimation of Pi: 3.14468
+~=~
+Start Time: 07:24:48 PM
+End Time: 07:24:48 PM
+Elapsed Time (In nanoseconds): 98543674
+Elapsed Time (In seconds) : .0985436740

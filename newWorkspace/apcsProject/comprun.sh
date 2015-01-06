@@ -8,7 +8,7 @@ getTime() {
     date +%F" "%r
 }
 
-STSRT=0
+START=0
 startTimer() {
     START=$(date +%s%N)
     echo "Clock started at: $startTime"
