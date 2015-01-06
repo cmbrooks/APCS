@@ -30,20 +30,40 @@ public class puzzle_data {
 			};
 	public static void main(String[] args) {
 		// 1) Find the word "SOFTWARE" in the array "puzzle."
-		// 2) When your program finds the word, it must print out the 
+		// 2) When your program finds the word, it must print out the
 		// locations and the characters they contain in order.
 		// Hints:
-		// Use a stack to remember your current location and the locations of 
-		// all the characters that you have found so far. 
-		// You can create other variables as needed. 
+		// Use a stack to remember your current location and the locations of
+		// all the characters that you have found so far.
+		// You can create other variables as needed.
         // The word can appear vertically, horizontally or diagonally
-		// in any order; search each position for the first letter, then 
-		// examine each of the eight possible neighbors to see if you find 
-		// next letter, and so on. 
-		// Remember to use the .length attribute of the array for a limit 
-		// See Chapter 4 in the Eckel book and search for Multidimensional 
-		// arrays. Try printing out some locations in the array if you 
+		// in any order; search each position for the first letter, then
+		// examine each of the eight possible neighbors to see if you find
+		// next letter, and so on.
+		// Remember to use the .length attribute of the array for a limit
+		// See Chapter 4 in the Eckel book and search for Multidimensional
+		// arrays. Try printing out some locations in the array if you
 		// are not sure about whether rows or columns come first.
+
+		ArrayList<String> coords = new ArrayList<String>;
+		int letterIndex = 0;
+		String target = "SOFTWARE";
+
+		for (int i = 0; i < array.size; i++) {
+			for (int j = 0; j < array[].size; j++) {
+
+			}
+		}
+
 	}
+
+	public static boolean checkN () {}
+	public static boolean checkNE () {}
+	public static boolean checkE () {}
+	public static boolean checkSE () {}
+	public static boolean checkS () {}
+	public static boolean checkSW () {}
+	/*West is covered because that was the last place that was checked*/
+	public static boolean checkNW () {}
 
 }
