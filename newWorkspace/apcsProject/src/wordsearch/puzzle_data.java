@@ -47,23 +47,130 @@ public class puzzle_data {
 
 		ArrayList<String> coords = new ArrayList<String>;
 		int letterIndex = 0;
-		String target = "SOFTWARE";
 
 		for (int i = 0; i < array.size; i++) {
-			for (int j = 0; j < array[].size; j++) {
-
+			for (int j = 0; j < array[0].size; j++) {
+				if (array[i][j] == searchword[letterIndex]) {
+					if (i == 0 && j == 0) {
+						/*Top left corner*/
+						checkE();
+						checkSE();
+						checkS();
+					} else if (i == 0 && j > 0) {
+						/*Left edge*/
+						checkE();
+						checkSE();
+						checkS();
+						checkSW();
+					} else if (i == array.size && j == array[0].size) {
+						/*Bottom right corner*/
+						checkN();
+						checkNW();
+					} else if (i < array.size && j == array[0].size) {
+						/*Right edge*/
+						checkN();
+						checkS();
+						checkSW();
+						checkNW();
+					} else if (i == array.size && j < array.size) {
+						/*Bottom edge*/
+						checkN();
+						checkNE();
+						checkE();
+						checkNW();
+					} else if (i == array.size && j == 0) {
+						/*Bottom Left corner*/
+						checkN();
+						checkNE();
+						checkE();
+					} else if (i == 0 && j == array[0].size) {
+						/*Top right corner*/
+						checkS();
+						checkSW();
+					} else {
+						/*In the Middle*/
+						checkN();
+						checkNE();
+						checkE();
+						checkSE();
+						checkS();
+						checkSW();
+						checkNW();
+					}
+					letterIndex = 0;
+				}
 			}
 		}
 
 	}
 
-	public static boolean checkN () {}
-	public static boolean checkNE () {}
-	public static boolean checkE () {}
-	public static boolean checkSE () {}
-	public static boolean checkS () {}
-	public static boolean checkSW () {}
+	public static boolean checkN (int i, int j, int letterIndex, char[] searchword, char[][] puzzle) {
+		i--;
+		if (i > puzzle.size) {
+			break;
+		}
+		if (puzzle[i][j] == searchword[letterIndex])
+			checkN();
+		}
+	}
+	public static boolean checkNE (int i, int j, int letterIndex, String target) {
+		i--;
+		j++;
+		if (i > puzzle.size || j > puzzle[0].size) {
+			break;
+		}
+		if (puzzle[i][j] == searchword[letterIndex]) {
+			checkNE();
+		}
+	}
+	public static boolean checkE (int i, int j, int letterIndex, String target) {
+		j++;
+		if (j > puzzle[0].size) {
+			break;
+		}
+		if (puzzle[i][j] == searchword[letterIndex]) {
+			checkE();
+		}
+	}
+	public static boolean checkSE (int i, int j, int letterIndex, String target) {
+		i++;
+		j++;
+		if (i > puzzle.size || j > puzzle[0].size) {
+			break;
+		}
+		if (puzzle[i][j] == searchword[letterIndex]) {
+			checkSE();
+		}
+	}
+	public static boolean checkS (int i, int j, int letterIndex, String target) {
+		i++;
+		if (i > puzzle.size) {
+			break;
+		}
+		if (puzzle[i][j] == searchword[letterIndex]) {
+			checkS();
+		}
+	}
+	public static boolean checkSW (int i, int j, int letterIndex, String target) {
+		i++;
+		j--;
+		if (i > puzzle.size || j > puzzle[0].size) {
+			break;
+		}
+		if (puzzle[i][j] == searchword[letterIndex]) {
+			checkSW();
+		}
+	}
 	/*West is covered because that was the last place that was checked*/
-	public static boolean checkNW () {}
+	public static boolean checkNW (int i, int j, int letterIndex, String target) {
+		i--;
+		j--;
+		if (i > puzzle.size || j > puzzle[0].size) {
+			break;
+		}
+		if (puzzle[i][j] == searchword[letterIndex]) {
+			checkNW();
+		}
+	}
 
 }
