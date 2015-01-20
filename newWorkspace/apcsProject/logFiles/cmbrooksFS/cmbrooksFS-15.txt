@@ -1,0 +1,14 @@
+cmbrooksFS.java
+2015-01-19 09:39:16 PM
+Main entered
+FS created
+File (file1.txt) added
+File (file2.txt) added
+File (file3.txt) added
+file1.txt
+file3.txt
+~=~
+Start Time: 09:39:16 PM
+End Time: 09:39:16 PM
+Elapsed Time (In nanoseconds): 47684928
+Elapsed Time (In seconds) : .0476849280
