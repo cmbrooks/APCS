@@ -1,6 +1,6 @@
 import java.util.*;
 
-class FS {
+class cmbrooksFS extends Interface{
     Set<String> fs;
     public FS (int size) {
         System.out.println("FS created");
@@ -39,17 +39,4 @@ class FS {
         System.out.println("##########");
     }
 
-}
-
-public class cmbrooksFS {
-    public static void main (String[] args) {
-        System.out.println("Main entered");
-        FS myFS = new FS(10);
-        myFS.create("file1.txt");
-        myFS.create("file2.txt");
-        myFS.create("file1.txt");
-        myFS.create("file3.txt");
-        myFS.erase("file2.txt");
-        myFS.dir();
-    }
 }
