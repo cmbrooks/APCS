@@ -1,6 +1,6 @@
 import java.util.*;
 
-class cmbrooksFS extends Interface{
+class cmbrooksFS {
     Set<String> fs;
     public FS (int size) {
         System.out.println("FS created");
