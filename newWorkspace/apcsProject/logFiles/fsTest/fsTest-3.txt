@@ -1,0 +1,8 @@
+fsTest.java
+2015-01-27 06:40:28 PM
+
+~=~
+Start Time: 06:40:28 PM
+End Time: 06:40:28 PM
+Elapsed Time (In nanoseconds): 49124318
+Elapsed Time (In seconds) : .0491243180
