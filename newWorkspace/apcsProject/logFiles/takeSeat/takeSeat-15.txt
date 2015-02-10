@@ -1,0 +1,18 @@
+takeSeat.java
+2015-02-10 09:09:29 PM
+5
+6
+1
+0
+3
+7
+0
+4
+7
+5
+9
+~=~
+Start Time: 09:09:29 PM
+End Time: 09:09:29 PM
+Elapsed Time (In nanoseconds): 397169720
+Elapsed Time (In seconds) : .3971697200

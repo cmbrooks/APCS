@@ -1,0 +1,18 @@
+takeSeat.java
+2015-02-10 09:12:18 PM
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+Number of correct seats taken: 9
+~=~
+Start Time: 09:12:18 PM
+End Time: 09:12:18 PM
+Elapsed Time (In nanoseconds): 159155325
+Elapsed Time (In seconds) : .1591553250
