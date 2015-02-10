@@ -1,0 +1,19 @@
+fsTest.java
+2015-01-27 06:41:54 PM
+-= Testing GGeorgeFS =-
+
+-= Testing cmbrooksFS =-
+FS created
+File (testFile1.txt) added
+File (testFile2.csv) added
+File (testFile3.txt) added
+Current Filesystem: 
+##########
+testFile1.txt
+testFile3.txt
+##########
+~=~
+Start Time: 06:41:54 PM
+End Time: 06:41:54 PM
+Elapsed Time (In nanoseconds): 53725291
+Elapsed Time (In seconds) : .0537252910
